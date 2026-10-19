@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEGIT - Premium Barbershop in Abuja</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
+body{background:#0f1115;color:white}
+header{padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;letter-spacing:3px;font-size:22px}
+.logo span{color:#3b82f6}
+.hero{padding:60px 20px;text-align:center;background:radial-gradient(600px at 50% -10%, #1e293b, #0f1115)}
+.hero h1{font-size:42px;letter-spacing:5px;margin-bottom:10px}
+.hero p{color:#94a3b8;font-size:16px;margin-bottom:30px}
+.card{background:#e5e7eb;color:#111827;max-width:380px;margin:30px auto;border-radius:22px;padding:28px 22px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.card h3{margin-bottom:14px}
+.card label{font-size:13px;font-weight:700;display:block;margin:14px 0 6px}
+.card input{width:100%;padding:14px;border-radius:12px;border:1.5px solid #d1d5db;outline:none}
+.card input:focus{border-color:#3b82f6}
+.btn{width:100%;margin-top:20px;background:#2563eb;color:white;border:none;padding:16px;border-radius:12px;font-weight:800;font-size:16px}
+.services{max-width:420px;margin:20px auto;padding:0 20px}
+.service{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #1e293b}
+.service span:last-child{color:#3b82f6;font-weight:700}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">LE<span>GIT</span></div>
+<div style="font-size:12px;color:#94a3b8">ABUJA • OPEN 8AM - 9PM</div>
+</header>
+
+<section class="hero">
+<h1>LEGIT</h1>
+<p>Premium Cuts. Clean Fades. Legit Confidence.</p>
+
+<div class="card">
+<h3 style="text-align:center">Book Your Appointment</h3>
+<label>Email</label>
+<input id="email" type="email" placeholder="you@example.com">
+<label>Phone number</label>
+<input id="phone" type="tel" placeholder="(555) 123-4567">
+<button class="btn" onclick="book()">Book Now</button>
+<p style="font-size:11px;color:#6b7280;text-align:center;margin-top:12px">You will be redirected to WhatsApp</p>
+</div>
+</section>
+
+<div class="services">
+<h3 style="margin-bottom:10px;letter-spacing:2px">PRICE LIST</h3>
+<div class="service"><span>Classic Haircut</span><span>₦3,000</span></div>
+<div class="service"><span>Beard Trim + Line Up</span><span>₦2,000</span></div>
+<div class="service"><span>Skin Fade</span><span>₦4,000</span></div>
+<div class="service"><span>Haircut + Beard</span><span>₦4,500</span></div>
+<div class="service"><span>Kids Cut</span><span>₦2,500</span></div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/2348012345678" target="_blank">WhatsApp Us</a>
+
+<script>
+function book(){
+ let e=document.getElementById('email').value;
+ let p=document.getElementById('phone').value;
+ let msg=`Hello LEGIT Barbershop, I want to book. Email: ${e}, Phone: ${p}`;
+ window.open(`https://wa.me/2348012345678?text=${encodeURIComponent(msg)}`,'_blank');
+}
+</script>
+</body>
+</html>
